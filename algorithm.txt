@@ -1,0 +1,17 @@
+before filter 30 /6 org : 5 klmpk
+
+after filter 24/6 org : 4 klmpk
+[6 data, result from filtering]
+
+6 orng/klpk => pop 1 =>5
+6 orng/klpk => pop 1 =>5 
+6 orng/klpk => pop 1 =>5
+6 orng/klpk => pop 1 =>5
+[4 data, result from popping] create new group =>
+
+5 + 1
+5 + 1 
+5 + 1
+5 + 1 
+4 + 2
+

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="stylesheet" href="utility/css/style.css" />
+    <link rel="stylesheet" href="utility/css/ui.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <title>Shuffleit - Start</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <nav class="navbar navbar-expand-md navbar-dark navbar-custom">
+        <div class="navbar-container">
+          <a class="navbar-brand mb-0 h1" href="/"
+            ><!-- <img
+              src="images/NEWLOGOWHITEBOLDENOUTLINE.png"
+              alt=""
+              width="30"
+              height="30"
+              class="d-inline-block align-top mr-2"
+            />--><span>Shuffleit</span></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </button>
+          <div
+            class="collapse navbar-collapse nav-item-wrapper"
+            id="navbarNavAltMarkup"
+          >
+            <div class="navbar-nav">
+              <a class="nav-link" href="how-to.html">How To</a>
+              <a class="nav-link" href="/">Start Shuffling</a>
+              <a class="nav-link" href="about.html">About</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <section class="row">
+          <div class="col kartu shadow-sm selection-box mr-2 ml-2">
+            <select name="" class="mode-selection">
+              <option value="-" selected disabled class="value-box">
+                Pilih mode Yang Anda Inginkan
+              </option>
+              <option
+                value="Pengacakan & Pembagian Anggota Kelompok"
+                class="value-box"
+              >
+                Pengacakan & Pembagian Anggota Kelompok
+              </option>
+              <option
+                value="Pengacakan Serta Menyeleksi Data"
+                class="value-box"
+              >
+                Pengacakan Serta Menyeleksi Data
+              </option>
+            </select>
+          </div>
+        </section>
+        <section class="row justify-content-center special-container">
+          <div class="col-lg-7 kartu mr-2 ml-2 mb-4 data-input-box">
+            <h6>Masukan Data</h6>
+            <div class="outer-box">
+              <label for="data-input-area"
+                >Silahkan masukan data pada kotak dibawah ini. Gunakan tanda
+                koma "," sebagai pemisah antara satu data dengan lainnya. Boleh
+                dituliskan secara horizontal maupun vertikal.</label
+              >
+              <textarea name="" id="data-input-area"></textarea>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-2 ml-2 kartu info-box">
+            <h6>Informasi dan Aksi</h6>
+            <div class="outer-box">
+              <div class="inner-box">
+                <p>
+                  Mode :
+                  <span class="mode-display-area"
+                    >Silahkan pilih mode terlebih dahulu</span
+                  >
+                </p>
+                <hr />
+              </div>
+              <div class="inner-box">
+                <p>Masukan caption tabel:</p>
+                <input
+                  type="text"
+                  class="caption-input"
+                  placeholder="Ini adalah caption tabel"
+                />
+                <hr />
+              </div>
+              <div class="inner-box">
+                <p class="number-input-title">
+                  Masukan jumlah anggota tiap kelompok :
+                </p>
+                <input
+                  type="number"
+                  class="member-count-input"
+                  placeholder="Masukan angka"
+                />
+                <hr />
+              </div>
+              <div class="inner-box">
+                <p>
+                  Jumlah data yang dimasukan :
+                  <span class="data-counter-area">0</span>
+                </p>
+                <hr />
+              </div>
+              <div class="inner-box">
+                <p>
+                  Jumlah Pengacakan :
+                  <span class="shuffle-counter-area">0</span> x
+                </p>
+                <hr />
+              </div>
+              <div class="inner-box">
+                <button class="btn shuffle-btn">Acak</button>
+                <div class="guide-area mt-2">
+                  <ul class="mb-0">
+                    <li></li>
+                    <li>*Silahkan masukan data yang akan diproses</li>
+                    <li>*Silahkan masukan caption tabel</li>
+                    <li>*Silahkan masukan angka</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="row special-container">
+          <div class="col">
+            <table class="table result-table table-bordered">
+              <caption style="caption-side: top; text-align: center">
+                Ini adalah caption tabel
+              </caption>
+              <thead class="thead-custom">
+                <tr>
+                  <th scope="col" class="kelompok-cell col-one-table-title">
+                    Kelompok
+                  </th>
+                  <th scope="col" class="col-two-table-title">
+                    Anggota
+                    <button
+                      class="copy-btn"
+                      data-toggle="modal"
+                      data-target="#copyDataModal"
+                    >
+                      <i class="far fa-copy"></i>
+                    </button>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="table-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+      <footer>© 2020-2021 RadhikaProduction • All rights reserved</footer>
+    </div>
+
+    <div class="text-field"></div>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="copyDataModal"
+      tabindex="-1"
+      aria-labelledby="copyDataModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="copyDataModalLabel">
+              Copy to clipboard
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true" style="color: white">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <textarea id="modal-text-area" readonly></textarea>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-sm modal-copy-btn"
+              data-dismiss="modal"
+            >
+              Copy
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="utility/js/app.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
